@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from "express";
-import { Wallet, Signer } from "fuels";
-import { concat, hexlify, arrayify } from "@ethersproject/bytes";
+import { Signer } from "fuels";
+import { arrayify } from "@ethersproject/bytes";
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
