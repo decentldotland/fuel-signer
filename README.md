@@ -16,8 +16,8 @@ npm run build && npm run start
 
 ## API
 
-- `GET /verify/:signature/:address/:message` 
-- example: `/verify/0xa088484b70e50977ccd206193aea3b7ce455c0dcdb81b1cdb9107087576a354b9777a81413024c2b32fc604c69b00f9b3c94e0dc6b0e46241a51a72c0a6d3933/fuel1jnluc5acjf5y4nh6a0y28499jhjj32x0ve8wk0hndugzpvyqn5xsfsfzly/aGVsbG8=`
+- `GET /verify/:signature/:message` 
+- example: `/verify/0xa088484b70e50977ccd206193aea3b7ce455c0dcdb81b1cdb9107087576a354b9777a81413024c2b32fc604c69b00f9b3c94e0dc6b0e46241a51a72c0a6d3933/aGVsbG8=`
 
 **Response:**
 
