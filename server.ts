@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from "express";
-import { Signer } from "fuels";
-import { arrayify } from "@ethersproject/bytes";
+import { Wallet, Signer } from "fuels";
+import { concat, hexlify, arrayify } from "@ethersproject/bytes";
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
@@ -10,9 +10,9 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.get(
-  "/verify/:signature/:address/:message",
+  "/verify/:signature/:message",
   async (req: Request, res: Response) => {
-    const { signature, address, message } = req.params;
+    const { signature, message } = req.params;
     const decodedMessage = atob(message);
     const addr = Signer.recoverAddress(
       Buffer.from(message),
